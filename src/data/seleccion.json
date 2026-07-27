@@ -11,6 +11,7 @@
   "fundacion": "1925",
   "capitan": "Enner Valencia",
   "ranking": "25",
+  "equipo": "Ecuador-La Tri",
 
   "goleadores": [
     {
@@ -20,7 +21,8 @@
       "club": "Internacional",
       "posición": "Delantero",
       "numero": 13,
-      "lugar": "Ecuador"
+      "lugar": "Ecuador",
+      "estatura": "1,73"
     },
     {
       "nombre": "Moisés Caicedo",
@@ -29,7 +31,8 @@
       "club": "Chelsea",
       "posición": "Centrocampista",
       "numero": 23,
-      "lugar": "Ecuador"
+      "lugar": "Ecuador",
+      "estatura": "1,80"
     },
     {
       "nombre": "Piero Hincapié",
@@ -38,7 +41,8 @@
       "club": "Bayer Leverkusen",
       "posición": "Defensa",
       "numero": 3,
-      "lugar": "Ecuador"
+      "lugar": "Ecuador",
+      "estatura": "1,90"
     },
     {
       "nombre": "Willian Pacho",
@@ -56,7 +60,8 @@
     "Moisés Caicedo",
     "Piero Hincapié",
     "Willian Pacho",
-    "Pervis Estupiñán"
+    "Pervis Estupiñán",
+    "Pedro Vite"
   ],
 
   "mundiales": [

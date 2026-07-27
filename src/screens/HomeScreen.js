@@ -15,6 +15,10 @@ const imagenes = {
   caicedo: require("../../assets/Moises.jpg"),
   hincapie: require("../../assets/Piero.jpg"),
   pacho: require("../../assets/William.jpg"),
+  pedro: require("../../assets/Pedro.jpg"),
+};
+const Participaciones = {
+  "Brasil 2014": require("../../assets/brazil.jpg"),
 };
 export default function HomeScreen() {
   return (
@@ -25,10 +29,10 @@ export default function HomeScreen() {
           style={styles.homeLogo}
         />
 
-        <Text style={styles.title}>{seleccion.nombre}</Text>
+        <Text style={styles.title}>{seleccion.equipo}</Text>
         <Text style={styles.subtitle}>{seleccion.apodo} {seleccion.bandera}</Text>
       </View>
-
+ 
       <View style={styles.card}>
         <Text style={styles.cardTitle}>⚽ Información del Equipo</Text>
         <Text style={styles.text}>
@@ -54,7 +58,10 @@ export default function HomeScreen() {
         • {jugador.posición}
       </Text>
     <Text style={styles.item}>
-      • {jugador.numero}
+      •número {jugador.numero}
+      </Text>
+      <Text style={styles.item}>
+      •estatura {jugador.estatura} metros
       </Text>
       {imagenes[jugador.imagen] && (
         <Image
@@ -72,7 +79,6 @@ export default function HomeScreen() {
   <Text style={styles.item}>
     • Confederación: {seleccion.confederacion}
   </Text>
-  
   <Text style={styles.item}>
     • Entrenador actual: {seleccion.entrenador}
   </Text>
@@ -106,9 +112,17 @@ export default function HomeScreen() {
   <Text style={styles.cardTitle}>🏆 Participaciones mundialistas</Text>
 
   {seleccion.mundiales.map((mundial, index) => (
-    <Text key={index} style={styles.item}>
+    <View key={index}>
+    <Text style={styles.item}>
       • {mundial}
     </Text>
+{Participaciones[mundial] && (
+<Image
+          source={Participaciones[mundial]}
+          style={styles.Imagenes}
+        />
+    )}
+    </View>
   ))}
 </View>
 <View style={styles.card}>
