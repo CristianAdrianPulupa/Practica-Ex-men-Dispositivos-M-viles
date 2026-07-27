@@ -136,7 +136,14 @@ export const styles = StyleSheet.create({
     height: 220,
     resizeMode: "contain",
     alignSelf: "center"
-  }
+  },
+  item1: {
+    color: "#f9fafb",
+    fontSize: 16,
+    marginBottom: 9,
+    lineHeight: 23,
+    textAlign: "center",
+  },
 });
 
 

@@ -18,7 +18,7 @@ const imagenes = {
   pedro: require("../../assets/Pedro.jpg"),
 };
 const Participaciones = {
-  "Brasil 2014": require("../../assets/brazil.jpg"),
+  "Estados Unidos, México y Canadá 2026": require("../../assets/mundial2026.jpg"),
 };
 export default function HomeScreen() {
   return (
@@ -113,15 +113,22 @@ export default function HomeScreen() {
 
   {seleccion.mundiales.map((mundial, index) => (
     <View key={index}>
-    <Text style={styles.item}>
-      • {mundial}
-    </Text>
-{Participaciones[mundial] && (
-<Image
+      <Text style={styles.item}>
+        • {mundial}
+      </Text>
+
+      {index === seleccion.mundiales.length - 1 && (
+        <Text style={styles.item1}>
+          🌎 Mundial actual
+        </Text>
+      )}
+
+      {Participaciones[mundial] && (
+        <Image
           source={Participaciones[mundial]}
           style={styles.Imagenes}
         />
-    )}
+      )}
     </View>
   ))}
 </View>
