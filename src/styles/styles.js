@@ -41,6 +41,10 @@ export const styles = StyleSheet.create({
     backgroundColor: "#07111f",
   },
 
+
+
+  
+// Pantalla principal
   header: {
     backgroundColor: "#FFCC00",
     paddingTop: 55,
@@ -89,16 +93,9 @@ export const styles = StyleSheet.create({
   },
 
   text: {
-    color: "#e5e7eb",
-    fontSize: 16,
-    lineHeight: 25,
-  },
-
-  item: {
     color: "#f9fafb",
     fontSize: 16,
-    marginBottom: 9,
-    lineHeight: 23,
+    lineHeight: 25,
   },
 
   button: {

@@ -1,29 +1,29 @@
 {
   "expo": {
-    "name": "MiPrimeraApp",
-    "slug": "MiPrimeraApp",
+    "name": "La Tri App",
+    "slug": "la-tri-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/ecuador-logo.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+    "image": "./assets/ecuador-logo.png",
+    "resizeMode": "contain",
+    "backgroundColor": "#FFCC00"
+  },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/ecuador-logo.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/ecuador-logo.png"
     }
   }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Animated, Image, Text } from "react-native";
+import { Animated, Image, Text, ImageBackground } from "react-native";
 import { styles } from "../styles/styles";
 import seleccion from "../data/seleccion.json";
 
