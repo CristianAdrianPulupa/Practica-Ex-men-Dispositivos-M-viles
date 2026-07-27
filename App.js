@@ -14,7 +14,7 @@ export default function App() {
     const timer = setTimeout(() => {
       Animated.timing(splashOpacity, {
         toValue: 0,
-        duration: 600,
+        duration: 200,
         useNativeDriver: true,
       }).start(() => {
         setShowSplash(false);
@@ -25,7 +25,7 @@ export default function App() {
           useNativeDriver: true,
         }).start();
       });
-    }, 2500);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);

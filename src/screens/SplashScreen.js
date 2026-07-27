@@ -9,7 +9,6 @@ export default function SplashScreen({ opacity }) {
         source={require("../../assets/ecuador-logo.png")}
         style={styles.logo}
       />
-
       <Text style={styles.splashText}>Ecuador - La Tri</Text>
       <Text style={styles.splashSubText}>Selección Ecuatoriana de Fútbol</Text>
     </Animated.View>

@@ -118,32 +118,6 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 
-  extraCard: {
-    backgroundColor: "#1e293b",
-    marginHorizontal: 20,
-    marginTop: 20,
-    padding: 20,
-    borderRadius: 18,
-    borderWidth: 2,
-    borderColor: "#FFCC00",
-  },
-
-  extraTitle: {
-    color: "#FFCC00",
-    fontSize: 21,
-    fontWeight: "bold",
-    marginBottom: 12,
-  },
-
-  extraPhrase: {
-    color: "#FFCC00",
-    fontSize: 16,
-    fontWeight: "bold",
-    marginTop: 15,
-    fontStyle: "italic",
-    lineHeight: 23,
-  },
-
   footer: {
     alignItems: "center",
     marginTop: 28,
@@ -152,9 +126,15 @@ export const styles = StyleSheet.create({
   },
 
   footerText: {
-    color: "#94a3b8",
+    color: "#f1f4f8",
     fontSize: 14,
     textAlign: "center",
     marginBottom: 5,
   },
+  Imagenes: {
+    width: 220,
+    height: 220,
+    resizeMode: "contain",
+    alignSelf: "center"
+  }
 });

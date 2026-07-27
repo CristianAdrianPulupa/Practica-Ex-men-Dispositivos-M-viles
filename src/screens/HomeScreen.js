@@ -8,7 +8,14 @@ import {
   Alert,
 } from "react-native";
 import { styles } from "../styles/styles";
+import seleccion from "../data/seleccion.json";
 
+const imagenes = {
+  enner: require("../../assets/Enner.jpg"),
+  caicedo: require("../../assets/Moises.jpg"),
+  hincapie: require("../../assets/Piero.jpg"),
+  pacho: require("../../assets/William.jpg"),
+};
 export default function HomeScreen() {
   return (
     <ScrollView style={styles.homeContainer}>
@@ -18,65 +25,124 @@ export default function HomeScreen() {
           style={styles.homeLogo}
         />
 
-        <Text style={styles.title}>Selección Ecuatoriana</Text>
-        <Text style={styles.subtitle}>La Tri 🇪🇨</Text>
+        <Text style={styles.title}>{seleccion.nombre}</Text>
+        <Text style={styles.subtitle}>{seleccion.apodo} {seleccion.bandera}</Text>
       </View>
 
       <View style={styles.card}>
-        <Text style={styles.cardTitle}>⚽ Información del equipo</Text>
+        <Text style={styles.cardTitle}>⚽ Información del Equipo</Text>
         <Text style={styles.text}>
-          La Selección Ecuatoriana de Fútbol representa oficialmente al Ecuador
-          en competiciones internacionales. Es conocida popularmente como La Tri.
+        {seleccion.descripcion}
         </Text>
       </View>
 
       <View style={styles.card}>
-        <Text style={styles.cardTitle}>📌 Datos básicos</Text>
-        <Text style={styles.item}>• Confederación: CONMEBOL</Text>
-        <Text style={styles.item}>• Entrenador actual: Sebastián Beccacece</Text>
-        <Text style={styles.item}>
-          • Estadio: Estadio Rodrigo Paz Delgado, Quito
-        </Text>
-      </View>
+  <Text style={styles.cardTitle}>👥 Mejores goleadores</Text>
 
-      <View style={styles.card}>
-        <Text style={styles.cardTitle}>👥 Convocados destacados</Text>
-        <Text style={styles.item}>• Enner Valencia</Text>
-        <Text style={styles.item}>• Moisés Caicedo</Text>
-        <Text style={styles.item}>• Piero Hincapié</Text>
-        <Text style={styles.item}>• Willian Pacho</Text>
-        <Text style={styles.item}>• Pervis Estupiñán</Text>
-      </View>
+  {seleccion.goleadores.map((jugador, index) => (
+    <View key={index}>
+      <Text style={styles.cardTitle}>
+      {jugador.nombre}
+      </Text>
+      <Text style={styles.item}>
+        • {jugador.Edad} años
+      </Text>
+      <Text style={styles.item}>
+        • {jugador.club}
+      </Text>
+      <Text style={styles.item}>
+        • {jugador.posición}
+      </Text>
+    <Text style={styles.item}>
+      • {jugador.numero}
+      </Text>
+      {imagenes[jugador.imagen] && (
+        <Image
+          source={imagenes[jugador.imagen]}
+          style={styles.Imagenes}
+        />
+      )}
+    </View>
+  ))}
+</View>
 
-      <View style={styles.card}>
-        <Text style={styles.cardTitle}>🏆 Participaciones mundialistas</Text>
-        <Text style={styles.item}>• Corea-Japón 2002</Text>
-        <Text style={styles.item}>• Alemania 2006</Text>
-        <Text style={styles.item}>• Brasil 2014</Text>
-        <Text style={styles.item}>• Qatar 2022</Text>
-        <Text style={styles.item}>• Estados Unidos, México y Canadá 2026</Text>
-      </View>
+<View style={styles.card}>
+  <Text style={styles.cardTitle}>📌 Datos básicos</Text>
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() =>
-          Alert.alert(
-            "¡Vamos Ecuador!",
-            "La Tri representa el orgullo del fútbol ecuatoriano. Ecuador participará en el Mundial 2026 y buscará seguir haciendo historia."
-          )
-        }
-      >
-        <Text style={styles.buttonText}>🇪🇨 ¡Vamos Ecuador!</Text>
-      </TouchableOpacity>
+  <Text style={styles.item}>
+    • Confederación: {seleccion.confederacion}
+  </Text>
+  
+  <Text style={styles.item}>
+    • Entrenador actual: {seleccion.entrenador}
+  </Text>
 
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>
-          Programación para Dispositivos Móviles - Décimo Semestre
-        </Text>
-        <Text style={styles.footerText}>
-          App creada con React Native y Expo Go
-        </Text>
-      </View>
+  <Text style={styles.item}>
+    • Estadio: {seleccion.estadio}
+  </Text>
+
+  <Text style={styles.item}>
+    • Fundación: {seleccion.fundacion}
+  </Text>
+  <Text style={styles.item}>
+    • Capitán: {seleccion.fundacion}
+  </Text>
+  <Text style={styles.item}>
+    • Fundación: {seleccion.fundacion}
+  </Text>
+</View>
+
+<View style={styles.card}>
+  <Text style={styles.cardTitle}>👥 Convocados destacados</Text>
+
+  {seleccion.convocados.map((jugador, index) => (
+    <Text key={index} style={styles.item}>
+      • {jugador}
+    </Text>
+  ))}
+</View>
+
+<View style={styles.card}>
+  <Text style={styles.cardTitle}>🏆 Participaciones mundialistas</Text>
+
+  {seleccion.mundiales.map((mundial, index) => (
+    <Text key={index} style={styles.item}>
+      • {mundial}
+    </Text>
+  ))}
+</View>
+<View style={styles.card}>
+  <Text style={styles.cardTitle}>🏆 Premios</Text>
+
+  {seleccion.premios.map((premios, index) => (
+    <Text key={index} style={styles.item}>
+      • {premios}
+    </Text>
+  ))}
+</View>
+<TouchableOpacity
+  style={styles.button}
+  onPress={() =>
+    Alert.alert(
+      seleccion.textoBoton,
+      seleccion.mensajeAlerta
+    )
+  }
+>
+  <Text style={styles.buttonText}>
+    {seleccion.bandera} {seleccion.textoBoton}
+  </Text>
+</TouchableOpacity>
+
+<View style={styles.footer}>
+  <Text style={styles.footerText}>
+    Programación para Dispositivos Móviles - Décimo Semestre
+  </Text>
+
+  <Text style={styles.footerText}>
+    App creada con React Native y Expo Go
+  </Text>
+</View>
     </ScrollView>
   );
 }
